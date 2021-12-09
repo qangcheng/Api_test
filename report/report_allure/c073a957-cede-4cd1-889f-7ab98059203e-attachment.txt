@@ -1,0 +1,1 @@
+{"code":0,"msg":"success!","data":{"id":15891,"create_time":"2021-12-09 10:05:33","update_time":"2021-12-09 10:05:33","goodscode":"sp_1639015533","goodsname":"appoium自动化","merchantid":"","merchantname":"","goodsprice":0.0,"stock":0,"goodsgroupid":0,"goodsstatus":1,"price":0.0}}

@@ -1,0 +1,9 @@
+读取到的ops是:['--html=./report/report.html', '--self-contained-html']
+读取到的username是:test
+<module 'request内置函数用法.test_b' from 'D:\\api_project\\request内置函数用法\\test_b.py'>
+<function test_b at 0x04687538>
+D:\api_project\request内置函数用法\test_b.py
+function
+实现的注册功能：test1
+测试用例里面拿到的param返回值是：test1
+测试用例里面拿到的result返回值是：success
