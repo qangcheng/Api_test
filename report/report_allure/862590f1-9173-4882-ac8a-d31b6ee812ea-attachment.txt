@@ -1,0 +1,2 @@
+{"code": 0, "msg": "login success!", "username": "test", "token": "5711833f371be376c756392933c6882ef8ed8a2b"}
+获取到的token为:5711833f371be376c756392933c6882ef8ed8a2b

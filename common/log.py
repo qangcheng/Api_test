@@ -19,8 +19,10 @@ class Logger(object):
 
         # 创建一个handler，用于写入日志文件
         rq = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime(time.time()))
-        log_path = os.getcwd() + "/logs/"
-        log_name = log_path + rq + ".log"
+        log_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+        log_name = os.path.join(log_path, "log", ".logs")
+        logging.basicConfig(filename=log_name, filemode="a")
+        print(log_name)
         #  这里进行判断，如果logger.handlers列表为空，则添加，否则，直接去写日志，解决重复打印的问题
         if not self.logger.handlers:
             # 创建一个handler，用于输出到控制台
@@ -31,9 +33,6 @@ class Logger(object):
             formatter = logging.Formatter(
                 "%(asctime)s - %(filename)s[line:%(lineno)d] - %(name)s - %(message)s")
             ch.setFormatter(formatter)
-
-            # 给logger添加handler
-            # self.logger.addHandler(fh)
             self.logger.addHandler(ch)
 
     def debug(self, msg):

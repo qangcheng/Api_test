@@ -1,0 +1,7 @@
+读取到的ops是:['--html=./report/report.html', '--self-contained-html']
+读取到的username是:"qangcheng"
+<module 'request内置函数用法.test_c' from 'D:\\api_project\\request内置函数用法\\test_c.py'>
+<function test_a at 0x04611AD8>
+D:\api_project\request内置函数用法\test_c.py
+function
+获取到的环境地址是：http://49.235.92.12:7005

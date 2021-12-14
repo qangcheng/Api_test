@@ -1,0 +1,3 @@
+{"code": 0, "msg": "login success!", "username": "test", "token": "902d7ca4b535fe06523909f02f9cbbb611824bda"}
+获取到的token为:902d7ca4b535fe06523909f02f9cbbb611824bda
+{"code":3003,"msg":"参数不合法","data":{"goodsname":["该字段不能为空。"]}}

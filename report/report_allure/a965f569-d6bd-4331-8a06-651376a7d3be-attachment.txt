@@ -1,0 +1,6 @@
+{"code": 0, "msg": "login success!", "username": "test", "token": "9b9f08d410b49530ee38e314abca73838473b941"}
+获取到的token为:9b9f08d410b49530ee38e314abca73838473b941
+获得的商品id是： 16170
+修改之前商品名称是： appium自动化
+修改后返回为 {'code': 0, 'msg': 'success!', 'data': {'id': 16170, 'create_time': '2021-12-14 10:21:07', 'update_time': '2021-12-14 10:21:07', 'goodscode': 'sp_1639448467', 'goodsname': 'update_xxxx', 'merchantid': '', 'merchantname': '', 'goodsprice': 0.0, 'stock': 0, 'goodsgroupid': 0, 'goodsstatus': 1, 'price': 0.0}}
+修改后商品ID是: update_xxxx

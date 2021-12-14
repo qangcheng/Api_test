@@ -1,4 +1,4 @@
-import pymysql
+import  pymysql
 
 # 数据库配置信息
 db_info = {
@@ -38,6 +38,7 @@ class Dbconnect(object):
             self.db.rollback()  # 回滚数据
 
     def close_sql(self):
+        """关闭SQL链接"""
         self.cursor.close()
         self.db.close()
 
