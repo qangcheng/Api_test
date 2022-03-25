@@ -420,7 +420,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 14-Dec-2021 at 10:21:08 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
+    <p>Report generated on 25-Mar-2022 at 16:14:30 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -428,7 +428,7 @@ function filter_table(elem) {
         <td><a href="http://49.235.92.12:7005" target="_blank">http://49.235.92.12:7005</a></td></tr>
       <tr>
         <td>JAVA_HOME</td>
-        <td>C:\Program Files\Java\jdk1.8.0_05</td></tr>
+        <td>E:\Java\Java\jdk1.8.0_05</td></tr>
       <tr>
         <td>Packages</td>
         <td>{"pluggy": "0.13.1", "py": "1.10.0", "pytest": "5.4.3"}</td></tr>
@@ -440,10 +440,10 @@ function filter_table(elem) {
         <td>{"allure-pytest": "2.8.6", "base-url": "1.4.2", "html": "2.1.1", "metadata": "1.11.0"}</td></tr>
       <tr>
         <td>Python</td>
-        <td>3.8.3</td></tr></table>
+        <td>3.8.10</td></tr></table>
     <h2>Summary</h2>
-    <p>24 tests ran in 12.30 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">24 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>24 tests ran in 10.83 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">19 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">5 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -454,6 +454,61 @@ function filter_table(elem) {
           <th>Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_case/test_login.py::Test_login::test_login_success</td>
+          <td class="col-duration">0.21</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;test_case.test_login.Test_login object at 0x0000014CFCEDCEE0&gt;, base_url = &#x27;http://49.235.92.12:7005&#x27;<br/><br/>    @pytest.mark.smoke<br/>    @allure.severity(&quot;blocker&quot;)<br/>    @allure.story(&quot;登录成功用例&quot;)<br/>    @allure.title(&quot;输入正确账号密码登录&quot;)<br/>    def test_login_success(self, base_url):  # 冒烟测试用例<br/>        &quot;&quot;&quot;登录成功用例&quot;&quot;&quot;<br/>        s = requests.Session()<br/>        r = login(s, base_url, &quot;test1&quot;, &quot;123456&quot;)<br/>&gt;       assert r.json().get(&quot;code&quot;) == 0<br/><span class="error">E       AttributeError: &#x27;Session&#x27; object has no attribute &#x27;json&#x27;</span><br/><br/>test_case\test_login.py:19: AttributeError<br/> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;login success!&#x27;, &#x27;username&#x27;: &#x27;test1&#x27;, &#x27;token&#x27;: &#x27;efd3abd6cbafad26b10dfe62453e85a18b1bbf89&#x27;}
+获取到的token为:efd3abd6cbafad26b10dfe62453e85a18b1bbf89
+<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[test10-123321-登录密码错误]</td>
+          <td class="col-duration">0.18</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;test_case.test_login.Test_login object at 0x0000014CFD080790&gt;, base_url = &#x27;http://49.235.92.12:7005&#x27;, user = &#x27;test10&#x27;, psw = &#x27;123321&#x27;<br/>title = &#x27;登录密码错误&#x27;<br/><br/>    @allure.story(&quot;登录失败用例&quot;)<br/>    @pytest.mark.parametrize(&#x27;user,psw,title&#x27;,<br/>                             [<br/>                                 [&quot;test10&quot;, &quot;123321&quot;, &quot;登录密码错误&quot;],<br/>                                 [&quot;aaxxxx01&quot;, &quot;123456&quot;, &quot;登录账号错误&quot;],<br/>                                 [&quot;test10&quot;, &quot;&quot;, &quot;登录密码为空&quot;],<br/>                                 [&quot;&quot;, &quot;&quot;, &quot;登录账号密码都为空&quot;]<br/>    <br/>                             ]<br/>                             )<br/>    def test_login_fail(self, base_url, user, psw, title):<br/>        &quot;&quot;&quot;登录失败用例&quot;&quot;&quot;<br/>        s = requests.Session()<br/>        allure.dynamic.title(title)<br/>        r = login(s, base_url, user, psw)<br/>&gt;       assert r.json().get(&quot;code&quot;) == 3003<br/><span class="error">E       AttributeError: &#x27;Session&#x27; object has no attribute &#x27;json&#x27;</span><br/><br/>test_case\test_login.py:38: AttributeError<br/> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 3003, &#x27;msg&#x27;: &#x27;账号或密码不正确&#x27;, &#x27;username&#x27;: &#x27;test10&#x27;, &#x27;token&#x27;: &#x27;&#x27;}
+获取到的token为:
+<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[aaxxxx01-123456-登录账号错误]</td>
+          <td class="col-duration">0.18</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;test_case.test_login.Test_login object at 0x0000014CFD080E50&gt;, base_url = &#x27;http://49.235.92.12:7005&#x27;, user = &#x27;aaxxxx01&#x27;, psw = &#x27;123456&#x27;<br/>title = &#x27;登录账号错误&#x27;<br/><br/>    @allure.story(&quot;登录失败用例&quot;)<br/>    @pytest.mark.parametrize(&#x27;user,psw,title&#x27;,<br/>                             [<br/>                                 [&quot;test10&quot;, &quot;123321&quot;, &quot;登录密码错误&quot;],<br/>                                 [&quot;aaxxxx01&quot;, &quot;123456&quot;, &quot;登录账号错误&quot;],<br/>                                 [&quot;test10&quot;, &quot;&quot;, &quot;登录密码为空&quot;],<br/>                                 [&quot;&quot;, &quot;&quot;, &quot;登录账号密码都为空&quot;]<br/>    <br/>                             ]<br/>                             )<br/>    def test_login_fail(self, base_url, user, psw, title):<br/>        &quot;&quot;&quot;登录失败用例&quot;&quot;&quot;<br/>        s = requests.Session()<br/>        allure.dynamic.title(title)<br/>        r = login(s, base_url, user, psw)<br/>&gt;       assert r.json().get(&quot;code&quot;) == 3003<br/><span class="error">E       AttributeError: &#x27;Session&#x27; object has no attribute &#x27;json&#x27;</span><br/><br/>test_case\test_login.py:38: AttributeError<br/> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 3003, &#x27;msg&#x27;: &#x27;账号或密码不正确&#x27;, &#x27;username&#x27;: &#x27;aaxxxx01&#x27;, &#x27;token&#x27;: &#x27;&#x27;}
+获取到的token为:
+<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[test10--登录密码为空]</td>
+          <td class="col-duration">0.20</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;test_case.test_login.Test_login object at 0x0000014CFD0DFAF0&gt;, base_url = &#x27;http://49.235.92.12:7005&#x27;, user = &#x27;test10&#x27;, psw = &#x27;&#x27;<br/>title = &#x27;登录密码为空&#x27;<br/><br/>    @allure.story(&quot;登录失败用例&quot;)<br/>    @pytest.mark.parametrize(&#x27;user,psw,title&#x27;,<br/>                             [<br/>                                 [&quot;test10&quot;, &quot;123321&quot;, &quot;登录密码错误&quot;],<br/>                                 [&quot;aaxxxx01&quot;, &quot;123456&quot;, &quot;登录账号错误&quot;],<br/>                                 [&quot;test10&quot;, &quot;&quot;, &quot;登录密码为空&quot;],<br/>                                 [&quot;&quot;, &quot;&quot;, &quot;登录账号密码都为空&quot;]<br/>    <br/>                             ]<br/>                             )<br/>    def test_login_fail(self, base_url, user, psw, title):<br/>        &quot;&quot;&quot;登录失败用例&quot;&quot;&quot;<br/>        s = requests.Session()<br/>        allure.dynamic.title(title)<br/>        r = login(s, base_url, user, psw)<br/>&gt;       assert r.json().get(&quot;code&quot;) == 3003<br/><span class="error">E       AttributeError: &#x27;Session&#x27; object has no attribute &#x27;json&#x27;</span><br/><br/>test_case\test_login.py:38: AttributeError<br/> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 3003, &#x27;msg&#x27;: &#x27;账号或密码不正确&#x27;, &#x27;username&#x27;: &#x27;test10&#x27;, &#x27;token&#x27;: &#x27;&#x27;}
+获取到的token为:
+<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[--登录账号密码都为空]</td>
+          <td class="col-duration">0.17</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;test_case.test_login.Test_login object at 0x0000014CFD0F6130&gt;, base_url = &#x27;http://49.235.92.12:7005&#x27;, user = &#x27;&#x27;, psw = &#x27;&#x27;<br/>title = &#x27;登录账号密码都为空&#x27;<br/><br/>    @allure.story(&quot;登录失败用例&quot;)<br/>    @pytest.mark.parametrize(&#x27;user,psw,title&#x27;,<br/>                             [<br/>                                 [&quot;test10&quot;, &quot;123321&quot;, &quot;登录密码错误&quot;],<br/>                                 [&quot;aaxxxx01&quot;, &quot;123456&quot;, &quot;登录账号错误&quot;],<br/>                                 [&quot;test10&quot;, &quot;&quot;, &quot;登录密码为空&quot;],<br/>                                 [&quot;&quot;, &quot;&quot;, &quot;登录账号密码都为空&quot;]<br/>    <br/>                             ]<br/>                             )<br/>    def test_login_fail(self, base_url, user, psw, title):<br/>        &quot;&quot;&quot;登录失败用例&quot;&quot;&quot;<br/>        s = requests.Session()<br/>        allure.dynamic.title(title)<br/>        r = login(s, base_url, user, psw)<br/>&gt;       assert r.json().get(&quot;code&quot;) == 3003<br/><span class="error">E       AttributeError: &#x27;Session&#x27; object has no attribute &#x27;json&#x27;</span><br/><br/>test_case\test_login.py:38: AttributeError<br/> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 3003, &#x27;msg&#x27;: &#x27;账号或密码不正确&#x27;, &#x27;username&#x27;: &#x27;&#x27;, &#x27;token&#x27;: &#x27;&#x27;}
+获取到的token为:
+<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
@@ -464,9 +519,9 @@ function filter_table(elem) {
           <td class="extra" colspan="4">
             <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>读取到的ops是:[&#x27;--html=./report/report.html&#x27;, &#x27;--self-contained-html&#x27;]
 读取到的username是:&quot;qangcheng&quot;
-&lt;module &#x27;request内置函数用法.test_b&#x27; from &#x27;D:\\api_project\\request内置函数用法\\test_b.py&#x27;&gt;
-&lt;function test_b at 0x046119B8&gt;
-D:\api_project\request内置函数用法\test_b.py
+&lt;module &#x27;request内置函数用法.test_b&#x27; from &#x27;E:\\GitCode\\testapiproject\\request内置函数用法\\test_b.py&#x27;&gt;
+&lt;function test_b at 0x0000014CFCF1FE50&gt;
+E:\GitCode\testapiproject\request内置函数用法\test_b.py
 function
 实现的注册功能：test1
 <br/> ------------------------------Captured stdout call------------------------------ <br/>测试用例里面拿到的param返回值是：test1
@@ -482,9 +537,9 @@ function
           <td class="extra" colspan="4">
             <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>读取到的ops是:[&#x27;--html=./report/report.html&#x27;, &#x27;--self-contained-html&#x27;]
 读取到的username是:&quot;qangcheng&quot;
-&lt;module &#x27;request内置函数用法.test_b&#x27; from &#x27;D:\\api_project\\request内置函数用法\\test_b.py&#x27;&gt;
-&lt;function test_b at 0x046119B8&gt;
-D:\api_project\request内置函数用法\test_b.py
+&lt;module &#x27;request内置函数用法.test_b&#x27; from &#x27;E:\\GitCode\\testapiproject\\request内置函数用法\\test_b.py&#x27;&gt;
+&lt;function test_b at 0x0000014CFCF1FE50&gt;
+E:\GitCode\testapiproject\request内置函数用法\test_b.py
 function
 实现的注册功能：test2
 <br/> ------------------------------Captured stdout call------------------------------ <br/>测试用例里面拿到的param返回值是：test2
@@ -500,9 +555,9 @@ function
           <td class="extra" colspan="4">
             <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>读取到的ops是:[&#x27;--html=./report/report.html&#x27;, &#x27;--self-contained-html&#x27;]
 读取到的username是:&quot;qangcheng&quot;
-&lt;module &#x27;request内置函数用法.test_c&#x27; from &#x27;D:\\api_project\\request内置函数用法\\test_c.py&#x27;&gt;
-&lt;function test_a at 0x04611AD8&gt;
-D:\api_project\request内置函数用法\test_c.py
+&lt;module &#x27;request内置函数用法.test_c&#x27; from &#x27;E:\\GitCode\\testapiproject\\request内置函数用法\\test_c.py&#x27;&gt;
+&lt;function test_a at 0x0000014CFCF1FEE0&gt;
+E:\GitCode\testapiproject\request内置函数用法\test_c.py
 function
 <br/> ------------------------------Captured stdout call------------------------------ <br/>获取到的环境地址是：http://49.235.92.12:7005
 <br/></div></td></tr></tbody>
@@ -516,9 +571,9 @@ function
           <td class="extra" colspan="4">
             <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>读取到的ops是:[&#x27;--html=./report/report.html&#x27;, &#x27;--self-contained-html&#x27;]
 读取到的username是:&quot;qangcheng&quot;
-&lt;module &#x27;request内置函数用法.test_c&#x27; from &#x27;D:\\api_project\\request内置函数用法\\test_c.py&#x27;&gt;
-&lt;function test_xxx at 0x04611778&gt;
-D:\api_project\request内置函数用法\test_c.py
+&lt;module &#x27;request内置函数用法.test_c&#x27; from &#x27;E:\\GitCode\\testapiproject\\request内置函数用法\\test_c.py&#x27;&gt;
+&lt;function test_xxx at 0x0000014CFCF3C040&gt;
+E:\GitCode\testapiproject\request内置函数用法\test_c.py
 function
 <br/> ------------------------------Captured stdout call------------------------------ <br/>测试第一次读到的地址是:http://49.235.92.12:7005
 测试第二次读到的地址是:http://49.235.92.12:8899
@@ -534,9 +589,9 @@ function
           <td class="extra" colspan="4">
             <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>读取到的ops是:[&#x27;--html=./report/report.html&#x27;, &#x27;--self-contained-html&#x27;]
 读取到的username是:&quot;qangcheng&quot;
-&lt;module &#x27;request内置函数用法.test_f&#x27; from &#x27;D:\\api_project\\request内置函数用法\\test_f.py&#x27;&gt;
-&lt;function test_x at 0x04611D18&gt;
-D:\api_project\request内置函数用法\test_f.py
+&lt;module &#x27;request内置函数用法.test_f&#x27; from &#x27;E:\\GitCode\\testapiproject\\request内置函数用法\\test_f.py&#x27;&gt;
+&lt;function test_x at 0x0000014CFCF3C670&gt;
+E:\GitCode\testapiproject\request内置函数用法\test_f.py
 function
 前置操作执行完成
 <br/> ------------------------------Captured stdout call------------------------------ <br/>用例执行的结果拿到的id是：10086
@@ -545,39 +600,39 @@ function
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_add_goods.py::Test_Goods::test_add_goods_goodsname[-ecpext0-参数化添加商品名称为空]</td>
-          <td class="col-duration">1.64</td>
+          <td class="col-duration">1.60</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>{&quot;code&quot;: 0, &quot;msg&quot;: &quot;login success!&quot;, &quot;username&quot;: &quot;test&quot;, &quot;token&quot;: &quot;902d7ca4b535fe06523909f02f9cbbb611824bda&quot;}
-获取到的token为:902d7ca4b535fe06523909f02f9cbbb611824bda
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>{&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;login success!&#x27;, &#x27;username&#x27;: &#x27;test&#x27;, &#x27;token&#x27;: &#x27;bd6ae917fabcb4fc2f3a87a67f02cba879f6a8a8&#x27;}
+获取到的token为:bd6ae917fabcb4fc2f3a87a67f02cba879f6a8a8
 <br/> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:3003,&quot;msg&quot;:&quot;参数不合法&quot;,&quot;data&quot;:{&quot;goodsname&quot;:[&quot;该字段不能为空。&quot;]}}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_add_goods.py::Test_Goods::test_add_goods_goodsname[appoium自动化-ecpext1-参数化添加中文加英文商品名称]</td>
-          <td class="col-duration">1.71</td>
+          <td class="col-duration">1.61</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:0,&quot;msg&quot;:&quot;success!&quot;,&quot;data&quot;:{&quot;id&quot;:16167,&quot;create_time&quot;:&quot;2021-12-14 10:20:58&quot;,&quot;update_time&quot;:&quot;2021-12-14 10:20:58&quot;,&quot;goodscode&quot;:&quot;sp_1639448458&quot;,&quot;goodsname&quot;:&quot;appoium自动化&quot;,&quot;merchantid&quot;:&quot;&quot;,&quot;merchantname&quot;:&quot;&quot;,&quot;goodsprice&quot;:0.0,&quot;stock&quot;:0,&quot;goodsgroupid&quot;:0,&quot;goodsstatus&quot;:1,&quot;price&quot;:0.0}}
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:0,&quot;msg&quot;:&quot;success!&quot;,&quot;data&quot;:{&quot;id&quot;:26272,&quot;create_time&quot;:&quot;2022-03-25 16:14:22&quot;,&quot;update_time&quot;:&quot;2022-03-25 16:14:22&quot;,&quot;goodscode&quot;:&quot;sp_1648196061&quot;,&quot;goodsname&quot;:&quot;appoium自动化&quot;,&quot;merchantid&quot;:&quot;&quot;,&quot;merchantname&quot;:&quot;&quot;,&quot;goodsprice&quot;:0.0,&quot;stock&quot;:0,&quot;goodsgroupid&quot;:0,&quot;goodsstatus&quot;:1,&quot;price&quot;:0.0}}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_add_goods.py::Test_Goods::test_add_goods_goodsname[&lt;&lt;&gt;&gt;,23@!!!-ecpext2-参数化添加乱码商品名称]</td>
-          <td class="col-duration">1.79</td>
+          <td class="col-duration">1.60</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:0,&quot;msg&quot;:&quot;success!&quot;,&quot;data&quot;:{&quot;id&quot;:16168,&quot;create_time&quot;:&quot;2021-12-14 10:21:00&quot;,&quot;update_time&quot;:&quot;2021-12-14 10:21:00&quot;,&quot;goodscode&quot;:&quot;sp_1639448459&quot;,&quot;goodsname&quot;:&quot;&lt;&lt;&gt;&gt;,23@!!!&quot;,&quot;merchantid&quot;:&quot;&quot;,&quot;merchantname&quot;:&quot;&quot;,&quot;goodsprice&quot;:0.0,&quot;stock&quot;:0,&quot;goodsgroupid&quot;:0,&quot;goodsstatus&quot;:1,&quot;price&quot;:0.0}}
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:0,&quot;msg&quot;:&quot;success!&quot;,&quot;data&quot;:{&quot;id&quot;:26273,&quot;create_time&quot;:&quot;2022-03-25 16:14:23&quot;,&quot;update_time&quot;:&quot;2022-03-25 16:14:23&quot;,&quot;goodscode&quot;:&quot;sp_1648196063&quot;,&quot;goodsname&quot;:&quot;&lt;&lt;&gt;&gt;,23@!!!&quot;,&quot;merchantid&quot;:&quot;&quot;,&quot;merchantname&quot;:&quot;&quot;,&quot;goodsprice&quot;:0.0,&quot;stock&quot;:0,&quot;goodsgroupid&quot;:0,&quot;goodsstatus&quot;:1,&quot;price&quot;:0.0}}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_add_goods.py::Test_Goods::test_add_goods_goodsname[2323434234343242342343423423423432423423423423434434-ecpext3-参数化添加大于30位字符商品名称]</td>
-          <td class="col-duration">1.70</td>
+          <td class="col-duration">1.59</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -587,17 +642,17 @@ function
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_add_goods.py::Test_Goods::test_add_goods_succees</td>
-          <td class="col-duration">0.20</td>
+          <td class="col-duration">0.11</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:0,&quot;msg&quot;:&quot;success!&quot;,&quot;data&quot;:{&quot;id&quot;:16169,&quot;create_time&quot;:&quot;2021-12-14 10:21:03&quot;,&quot;update_time&quot;:&quot;2021-12-14 10:21:03&quot;,&quot;goodscode&quot;:&quot;sp_1639448455&quot;,&quot;goodsname&quot;:&quot;appium自动化&quot;,&quot;merchantid&quot;:&quot;&quot;,&quot;merchantname&quot;:&quot;&quot;,&quot;goodsprice&quot;:0.0,&quot;stock&quot;:0,&quot;goodsgroupid&quot;:0,&quot;goodsstatus&quot;:1,&quot;price&quot;:0.0}}
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:0,&quot;msg&quot;:&quot;success!&quot;,&quot;data&quot;:{&quot;id&quot;:26274,&quot;create_time&quot;:&quot;2022-03-25 16:14:27&quot;,&quot;update_time&quot;:&quot;2022-03-25 16:14:27&quot;,&quot;goodscode&quot;:&quot;sp_1648196059&quot;,&quot;goodsname&quot;:&quot;appium自动化&quot;,&quot;merchantid&quot;:&quot;&quot;,&quot;merchantname&quot;:&quot;&quot;,&quot;goodsprice&quot;:0.0,&quot;stock&quot;:0,&quot;goodsgroupid&quot;:0,&quot;goodsstatus&quot;:1,&quot;price&quot;:0.0}}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_add_goods.py::Test_Goods::test_add_goodid_null</td>
-          <td class="col-duration">0.16</td>
+          <td class="col-duration">0.09</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -607,7 +662,7 @@ function
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_add_goods.py::Test_Goods::test_add_Duplicate_ID</td>
-          <td class="col-duration">0.15</td>
+          <td class="col-duration">0.09</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -617,7 +672,7 @@ function
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_add_goods.py::Test_Goods::test_add_goodsname_null</td>
-          <td class="col-duration">0.15</td>
+          <td class="col-duration">0.09</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -626,95 +681,40 @@ function
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">test_case/test_login.py::Test_login::test_login_success</td>
-          <td class="col-duration">0.35</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;: 0, &quot;msg&quot;: &quot;login success!&quot;, &quot;username&quot;: &quot;test1&quot;, &quot;token&quot;: &quot;12f34216e37f6c5f50bd7b436daea8831e7c989d&quot;}
-获取到的token为:12f34216e37f6c5f50bd7b436daea8831e7c989d
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[test10-123321-登录密码错误]</td>
-          <td class="col-duration">0.23</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;: 3003, &quot;msg&quot;: &quot;\u8d26\u53f7\u6216\u5bc6\u7801\u4e0d\u6b63\u786e&quot;, &quot;username&quot;: &quot;test10&quot;, &quot;token&quot;: &quot;&quot;}
-获取到的token为:
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[aaxxxx01-123456-登录账号错误]</td>
-          <td class="col-duration">0.21</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;: 3003, &quot;msg&quot;: &quot;\u8d26\u53f7\u6216\u5bc6\u7801\u4e0d\u6b63\u786e&quot;, &quot;username&quot;: &quot;aaxxxx01&quot;, &quot;token&quot;: &quot;&quot;}
-获取到的token为:
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[test10--登录密码为空]</td>
-          <td class="col-duration">0.27</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;: 3003, &quot;msg&quot;: &quot;\u8d26\u53f7\u6216\u5bc6\u7801\u4e0d\u6b63\u786e&quot;, &quot;username&quot;: &quot;test10&quot;, &quot;token&quot;: &quot;&quot;}
-获取到的token为:
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[--登录账号密码都为空]</td>
-          <td class="col-duration">0.25</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;: 3003, &quot;msg&quot;: &quot;\u8d26\u53f7\u6216\u5bc6\u7801\u4e0d\u6b63\u786e&quot;, &quot;username&quot;: &quot;&quot;, &quot;token&quot;: &quot;&quot;}
-获取到的token为:
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_login_params.py::test_login_params[test_input0-expected0-参数化标题:登录成功]</td>
-          <td class="col-duration">0.32</td>
+          <td class="col-duration">0.18</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;: 0, &quot;msg&quot;: &quot;login success!&quot;, &quot;username&quot;: &quot;test&quot;, &quot;token&quot;: &quot;5711833f371be376c756392933c6882ef8ed8a2b&quot;}
-获取到的token为:5711833f371be376c756392933c6882ef8ed8a2b
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;: 0, &quot;msg&quot;: &quot;login success!&quot;, &quot;username&quot;: &quot;test&quot;, &quot;token&quot;: &quot;eff60795c5a353538519a4dfd2a65c7bf7d06ab6&quot;}
+获取到的token为:eff60795c5a353538519a4dfd2a65c7bf7d06ab6
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_login_params.py::test_login_params[test_input1-expected1-参数化标题:登录失败]</td>
-          <td class="col-duration">0.23</td>
+          <td class="col-duration">0.19</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;: 3003, &quot;msg&quot;: &quot;\u8d26\u53f7\u6216\u5bc6\u7801\u4e0d\u6b63\u786e&quot;, &quot;username&quot;: &quot;test&quot;, &quot;token&quot;: &quot;&quot;}
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:3003,&quot;msg&quot;:&quot;账号或密码不正确&quot;,&quot;username&quot;:&quot;test&quot;,&quot;token&quot;:&quot;&quot;}
 获取到的token为:
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_register.py::Test_Register::test_register_suceess</td>
-          <td class="col-duration">0.29</td>
+          <td class="col-duration">0.20</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;register success!&#x27;, &#x27;data&#x27;: {}}
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;register success!&#x27;, &#x27;data&#x27;: {&#x27;username&#x27;: &#x27;test_xxyy&#x27;}}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_register.py::Test_Register::test_register_2</td>
-          <td class="col-duration">0.34</td>
+          <td class="col-duration">0.26</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -724,7 +724,7 @@ function
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_register.py::Test_Register::test_nulluser_resgister</td>
-          <td class="col-duration">0.10</td>
+          <td class="col-duration">0.08</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -734,14 +734,14 @@ function
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/workfiow/test_add_get_updtae_goods.py::test_goods_workflow</td>
-          <td class="col-duration">0.52</td>
+          <td class="col-duration">0.29</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>{&quot;code&quot;: 0, &quot;msg&quot;: &quot;login success!&quot;, &quot;username&quot;: &quot;test&quot;, &quot;token&quot;: &quot;9b9f08d410b49530ee38e314abca73838473b941&quot;}
-获取到的token为:9b9f08d410b49530ee38e314abca73838473b941
-<br/> ------------------------------Captured stdout call------------------------------ <br/>获得的商品id是： 16170
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>{&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;login success!&#x27;, &#x27;username&#x27;: &#x27;test&#x27;, &#x27;token&#x27;: &#x27;570519966528cc98fe340aca8c87f4f62a6964e5&#x27;}
+获取到的token为:570519966528cc98fe340aca8c87f4f62a6964e5
+<br/> ------------------------------Captured stdout call------------------------------ <br/>获得的商品id是： 26275
 修改之前商品名称是： appium自动化
-修改后返回为 {&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;success!&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: 16170, &#x27;create_time&#x27;: &#x27;2021-12-14 10:21:07&#x27;, &#x27;update_time&#x27;: &#x27;2021-12-14 10:21:07&#x27;, &#x27;goodscode&#x27;: &#x27;sp_1639448467&#x27;, &#x27;goodsname&#x27;: &#x27;update_xxxx&#x27;, &#x27;merchantid&#x27;: &#x27;&#x27;, &#x27;merchantname&#x27;: &#x27;&#x27;, &#x27;goodsprice&#x27;: 0.0, &#x27;stock&#x27;: 0, &#x27;goodsgroupid&#x27;: 0, &#x27;goodsstatus&#x27;: 1, &#x27;price&#x27;: 0.0}}
+修改后返回为 {&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;success!&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: 26275, &#x27;create_time&#x27;: &#x27;2022-03-25 16:14:30&#x27;, &#x27;update_time&#x27;: &#x27;2022-03-25 16:14:30&#x27;, &#x27;goodscode&#x27;: &#x27;sp_1648196070&#x27;, &#x27;goodsname&#x27;: &#x27;update_xxxx&#x27;, &#x27;merchantid&#x27;: &#x27;&#x27;, &#x27;merchantname&#x27;: &#x27;&#x27;, &#x27;goodsprice&#x27;: 0.0, &#x27;stock&#x27;: 0, &#x27;goodsgroupid&#x27;: 0, &#x27;goodsstatus&#x27;: 1, &#x27;price&#x27;: 0.0}}
 修改后商品ID是: update_xxxx
 <br/></div></td></tr></tbody></table></body></html>

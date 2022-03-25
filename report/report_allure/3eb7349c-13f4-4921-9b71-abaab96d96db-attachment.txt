@@ -1,1 +1,0 @@
-{"code":0,"msg":"success!","data":{"id":16168,"create_time":"2021-12-14 10:21:00","update_time":"2021-12-14 10:21:00","goodscode":"sp_1639448459","goodsname":"<<>>,23@!!!","merchantid":"","merchantname":"","goodsprice":0.0,"stock":0,"goodsgroupid":0,"goodsstatus":1,"price":0.0}}

@@ -52,8 +52,8 @@ if __name__ == '__main__':
                    port=3309)
     sql1 = 'DELETE FROM auth_user WHERE username= "test_xxyy"'
     db.select_sql(sql1)
-    sql2 = 'UPDATE apiapp_goods SET goodsname ="test133" WHERE id =81 '
+    sql2 = 'UPDATE apiapp_goods SET goodsname ="test133" WHERE id =12 '
     db.execute_sql(sql2)
-    sql3 = 'SELECT *from apiapp_goods WHERE id =81'
+    sql3 = 'SELECT *from apiapp_goods WHERE id =12'
     result = db.select_sql(sql3)
     print(result)

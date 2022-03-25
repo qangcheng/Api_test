@@ -420,7 +420,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 08-Dec-2021 at 16:16:25 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
+    <p>Report generated on 25-Mar-2022 at 16:19:58 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -428,7 +428,7 @@ function filter_table(elem) {
         <td><a href="http://49.235.92.12:7005" target="_blank">http://49.235.92.12:7005</a></td></tr>
       <tr>
         <td>JAVA_HOME</td>
-        <td>C:\Program Files\Java\jdk1.8.0_05</td></tr>
+        <td>E:\Java\Java\jdk1.8.0_05</td></tr>
       <tr>
         <td>Packages</td>
         <td>{"pluggy": "0.13.1", "py": "1.10.0", "pytest": "5.4.3"}</td></tr>
@@ -440,10 +440,10 @@ function filter_table(elem) {
         <td>{"allure-pytest": "2.8.6", "base-url": "1.4.2", "html": "2.1.1", "metadata": "1.11.0"}</td></tr>
       <tr>
         <td>Python</td>
-        <td>3.8.3</td></tr></table>
+        <td>3.8.10</td></tr></table>
     <h2>Summary</h2>
-    <p>2 tests ran in 0.77 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>4 tests ran in 0.85 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">4 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -457,22 +457,44 @@ function filter_table(elem) {
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">test_case/test_login_params.py::test_login_params[test_input0-expected0-参数化标题:登录成功]</td>
-          <td class="col-duration">0.33</td>
+          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[test10-123321-登录密码错误]</td>
+          <td class="col-duration">0.18</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;: 0, &quot;msg&quot;: &quot;login success!&quot;, &quot;username&quot;: &quot;test&quot;, &quot;token&quot;: &quot;aef70de8340440f925715b686c297b22282b5fd3&quot;}
-获取到的token为:aef70de8340440f925715b686c297b22282b5fd3
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 3003, &#x27;msg&#x27;: &#x27;账号或密码不正确&#x27;, &#x27;username&#x27;: &#x27;test10&#x27;, &#x27;token&#x27;: &#x27;&#x27;}
+获取到的token为:
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">test_case/test_login_params.py::test_login_params[test_input1-expected1-参数化标题:登录失败]</td>
-          <td class="col-duration">0.23</td>
+          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[aaxxxx01-123456-登录账号错误]</td>
+          <td class="col-duration">0.20</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;: 3003, &quot;msg&quot;: &quot;\u8d26\u53f7\u6216\u5bc6\u7801\u4e0d\u6b63\u786e&quot;, &quot;username&quot;: &quot;test&quot;, &quot;token&quot;: &quot;&quot;}
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 3003, &#x27;msg&#x27;: &#x27;账号或密码不正确&#x27;, &#x27;username&#x27;: &#x27;aaxxxx01&#x27;, &#x27;token&#x27;: &#x27;&#x27;}
+获取到的token为:
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[test10--登录密码为空]</td>
+          <td class="col-duration">0.19</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 3003, &#x27;msg&#x27;: &#x27;账号或密码不正确&#x27;, &#x27;username&#x27;: &#x27;test10&#x27;, &#x27;token&#x27;: &#x27;&#x27;}
+获取到的token为:
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[--登录账号密码都为空]</td>
+          <td class="col-duration">0.19</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 3003, &#x27;msg&#x27;: &#x27;账号或密码不正确&#x27;, &#x27;username&#x27;: &#x27;&#x27;, &#x27;token&#x27;: &#x27;&#x27;}
 获取到的token为:
 <br/></div></td></tr></tbody></table></body></html>

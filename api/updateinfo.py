@@ -12,8 +12,7 @@ def update_info(s: requests.Session, base_url, name, sex="F", age=20, mail="8370
         "age": age,
         "mail": mail
     }
-    r = s.post(url, data=body)
-    print(s.headers)
+    r = s.post(url, json=body)
     return r
 
 
@@ -32,4 +31,4 @@ if __name__ == '__main__':
     r = update_info(s, base_url, "test1", sex="F", age=21, mail="238283@qq.com")
     print(r.json())
     r2 = get_info(s, base_url)
-    print(r2.text)
+    print(r2.json())

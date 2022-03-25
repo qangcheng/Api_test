@@ -6,6 +6,15 @@ good_id = "sp_" + str(int(time.time()))
 
 
 def add_goods(s, base_url, goodsname: str, good_id, **kwargs):
+    """
+    添加商品信息
+    :param s:  创建session会话
+    :param base_url: 请求地址，查看在pytestini
+    :param goodsname: 商品名称
+    :param good_id: 商品id
+    :param kwargs: 其他参数
+    :return: 返回添加的商品的信息
+    """
     """新增商品接口"""
     url = base_url + "/api/v1/goods"
     body = {

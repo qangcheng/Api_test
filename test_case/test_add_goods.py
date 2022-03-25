@@ -9,9 +9,11 @@ l_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 goodspath = os.path.join(l_path, "data", "ymltestgoods.yml")
 test_goodspath = readyml(goodspath)
 
+
 @allure.feature("添加商品")
 class Test_Goods(object):
     """商品接口请求测试报告"""
+
     @allure.story("添加不同类型字符串商品名称参数化")
     # @pytest.mark.parametrize("goodsname,ecpext,title", [
     #     ["", {"code": 3003, "msg": "参数不合法"}, "参数化添加商品名称为空"],

@@ -18,6 +18,7 @@ yaml_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 test_data = readyml(yaml_path)['userinfo']
 print(test_data)
 
+
 @allure.story("参数化登录用例")
 @pytest.mark.parametrize("test_input,expected,title", test_data)
 def test_login_params(base_url, test_input, expected, title):

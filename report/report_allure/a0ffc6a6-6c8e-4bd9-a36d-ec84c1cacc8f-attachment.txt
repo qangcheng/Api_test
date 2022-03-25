@@ -1,9 +1,0 @@
-读取到的ops是:['--html=./report/report.html', '--self-contained-html']
-读取到的username是:"qangcheng"
-<module 'request内置函数用法.test_c' from 'D:\\api_project\\request内置函数用法\\test_c.py'>
-<function test_xxx at 0x04611778>
-D:\api_project\request内置函数用法\test_c.py
-function
-测试第一次读到的地址是:http://49.235.92.12:7005
-测试第二次读到的地址是:http://49.235.92.12:8899
-测试第三次读到的地址是:http://49.235.92.12:9900

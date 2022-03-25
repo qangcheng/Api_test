@@ -15,7 +15,7 @@ class Test_login(object):
     def test_login_success(self, base_url):  # 冒烟测试用例
         """登录成功用例"""
         s = requests.Session()
-        r = login(s, base_url, "test1", "123456")
+        r = login(s, base_url, "test", "123456")
         assert r.json().get("code") == 0
         assert r.json().get("msg") == "login success!"
         assert len(r.json().get("token")) == 40
