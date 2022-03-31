@@ -23,7 +23,7 @@ class Test_Register(object):
     @allure.title("输入已注册账号注册")
     def test_register_2(self, base_url, delete_register_user):
         """重复注册账号"""
-        r1 = register(base_url, user="test_xxyy")
+        register(base_url, user="test_xxyy")
         r2 = register(base_url, user="test_xxyy")
         print(r2.json())
         assert r2.json()['code'] == 2000

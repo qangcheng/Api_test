@@ -4,61 +4,71 @@
     <meta charset="utf-8"/>
     <title>Test Report</title>
     <style>body {
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 12px;
-	/* do not increase min-width as some may use split screens */
-	min-width: 800px;
-	color: #999;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  /* do not increase min-width as some may use split screens */
+  min-width: 800px;
+  color: #999;
 }
 
 h1 {
-	font-size: 24px;
-	color: black;
+  font-size: 24px;
+  color: black;
 }
 
 h2 {
-	font-size: 16px;
-	color: black;
+  font-size: 16px;
+  color: black;
 }
 
 p {
-    color: black;
+  color: black;
 }
 
 a {
-	color: #999;
+  color: #999;
 }
 
 table {
-	border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 /******************************
  * SUMMARY INFORMATION
  ******************************/
-
 #environment td {
-	padding: 5px;
-	border: 1px solid #E6E6E6;
+  padding: 5px;
+  border: 1px solid #E6E6E6;
 }
-
 #environment tr:nth-child(odd) {
-	background-color: #f6f6f6;
+  background-color: #f6f6f6;
 }
 
 /******************************
  * TEST RESULT COLORS
  ******************************/
-span.passed, .passed .col-result {
-	color: green;
-}
-span.skipped, span.xfailed, span.rerun, .skipped .col-result, .xfailed .col-result, .rerun .col-result {
-	color: orange;
-}
-span.error, span.failed, span.xpassed, .error .col-result, .failed .col-result, .xpassed .col-result  {
-	color: red;
+span.passed,
+.passed .col-result {
+  color: green;
 }
 
+span.skipped,
+span.xfailed,
+span.rerun,
+.skipped .col-result,
+.xfailed .col-result,
+.rerun .col-result {
+  color: orange;
+}
+
+span.error,
+span.failed,
+span.xpassed,
+.error .col-result,
+.failed .col-result,
+.xpassed .col-result {
+  color: red;
+}
 
 /******************************
  * RESULTS TABLE
@@ -68,117 +78,116 @@ span.error, span.failed, span.xpassed, .error .col-result, .failed .col-result, 
  * 3. Sorting items
  *
  ******************************/
-
 /*------------------
  * 1. Table Layout
  *------------------*/
-
 #results-table {
-	border: 1px solid #e6e6e6;
-	color: #999;
-	font-size: 12px;
-	width: 100%
+  border: 1px solid #e6e6e6;
+  color: #999;
+  font-size: 12px;
+  width: 100%;
 }
-
-#results-table th, #results-table td {
-	padding: 5px;
-	border: 1px solid #E6E6E6;
-	text-align: left
+#results-table th,
+#results-table td {
+  padding: 5px;
+  border: 1px solid #E6E6E6;
+  text-align: left;
 }
 #results-table th {
-	font-weight: bold
+  font-weight: bold;
 }
 
 /*------------------
  * 2. Extra
  *------------------*/
-
-.log:only-child {
-	height: inherit
-}
 .log {
-	background-color: #e6e6e6;
-	border: 1px solid #e6e6e6;
-	color: black;
-	display: block;
-	font-family: "Courier New", Courier, monospace;
-	height: 230px;
-	overflow-y: scroll;
-	padding: 5px;
-	white-space: pre-wrap
+  background-color: #e6e6e6;
+  border: 1px solid #e6e6e6;
+  color: black;
+  display: block;
+  font-family: "Courier New", Courier, monospace;
+  height: 230px;
+  overflow-y: scroll;
+  padding: 5px;
+  white-space: pre-wrap;
 }
+.log:only-child {
+  height: inherit;
+}
+
 div.image {
-	border: 1px solid #e6e6e6;
-	float: right;
-	height: 240px;
-	margin-left: 5px;
-	overflow: hidden;
-	width: 320px
+  border: 1px solid #e6e6e6;
+  float: right;
+  height: 240px;
+  margin-left: 5px;
+  overflow: hidden;
+  width: 320px;
 }
 div.image img {
-	width: 320px
+  width: 320px;
 }
+
 div.video {
-	border: 1px solid #e6e6e6;
-	float: right;
-	height: 240px;
-	margin-left: 5px;
-	overflow: hidden;
-	width: 320px
+  border: 1px solid #e6e6e6;
+  float: right;
+  height: 240px;
+  margin-left: 5px;
+  overflow: hidden;
+  width: 320px;
 }
 div.video video {
-	overflow: hidden;
-	width: 320px;
-    height: 240px;
+  overflow: hidden;
+  width: 320px;
+  height: 240px;
 }
+
 .collapsed {
-	display: none;
+  display: none;
 }
+
 .expander::after {
-	content: " (show details)";
-	color: #BBB;
-	font-style: italic;
-	cursor: pointer;
+  content: " (show details)";
+  color: #BBB;
+  font-style: italic;
+  cursor: pointer;
 }
+
 .collapser::after {
-	content: " (hide details)";
-	color: #BBB;
-	font-style: italic;
-	cursor: pointer;
+  content: " (hide details)";
+  color: #BBB;
+  font-style: italic;
+  cursor: pointer;
 }
 
 /*------------------
  * 3. Sorting items
  *------------------*/
 .sortable {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .sort-icon {
-	font-size: 0px;
-	float: left;
-	margin-right: 5px;
-	margin-top: 5px;
-	/*triangle*/
-	width: 0;
-	height: 0;
-	border-left: 8px solid transparent;
-	border-right: 8px solid transparent;
+  font-size: 0px;
+  float: left;
+  margin-right: 5px;
+  margin-top: 5px;
+  /*triangle*/
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
 }
-
 .inactive .sort-icon {
-	/*finish triangle*/
-	border-top: 8px solid #E6E6E6;
+  /*finish triangle*/
+  border-top: 8px solid #E6E6E6;
 }
-
 .asc.active .sort-icon {
-	/*finish triangle*/
-	border-bottom: 8px solid #999;
+  /*finish triangle*/
+  border-bottom: 8px solid #999;
 }
-
 .desc.active .sort-icon {
-	/*finish triangle*/
-	border-top: 8px solid #999;
+  /*finish triangle*/
+  border-top: 8px solid #999;
 }
 </style></head>
   <body onLoad="init()">
@@ -194,197 +203,197 @@ function toArray(iter) {
     return Array.prototype.slice.call(iter);
 }
 
-function find(selector, elem) {
+function find(selector, elem) { // eslint-disable-line no-redeclare
     if (!elem) {
         elem = document;
     }
     return elem.querySelector(selector);
 }
 
-function find_all(selector, elem) {
+function findAll(selector, elem) {
     if (!elem) {
         elem = document;
     }
     return toArray(elem.querySelectorAll(selector));
 }
 
-function sort_column(elem) {
-    toggle_sort_states(elem);
-    var colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
-    var key;
-    if (elem.classList.contains('numeric')) {
-        key = key_num;
-    } else if (elem.classList.contains('result')) {
-        key = key_result;
+function sortColumn(elem) {
+    toggleSortStates(elem);
+    const colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    let key;
+    if (elem.classList.contains('result')) {
+        key = keyResult;
+    } else if (elem.classList.contains('links')) {
+        key = keyLink;
     } else {
-        key = key_alpha;
+        key = keyAlpha;
     }
-    sort_table(elem, key(colIndex));
+    sortTable(elem, key(colIndex));
 }
 
-function show_all_extras() {
-    find_all('.col-result').forEach(show_extras);
+function showAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(showExtras);
 }
 
-function hide_all_extras() {
-    find_all('.col-result').forEach(hide_extras);
+function hideAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(hideExtras);
 }
 
-function show_extras(colresult_elem) {
-    var extras = colresult_elem.parentNode.nextElementSibling;
-    var expandcollapse = colresult_elem.firstElementChild;
-    extras.classList.remove("collapsed");
-    expandcollapse.classList.remove("expander");
-    expandcollapse.classList.add("collapser");
+function showExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.remove('collapsed');
+    expandcollapse.classList.remove('expander');
+    expandcollapse.classList.add('collapser');
 }
 
-function hide_extras(colresult_elem) {
-    var extras = colresult_elem.parentNode.nextElementSibling;
-    var expandcollapse = colresult_elem.firstElementChild;
-    extras.classList.add("collapsed");
-    expandcollapse.classList.remove("collapser");
-    expandcollapse.classList.add("expander");
+function hideExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.add('collapsed');
+    expandcollapse.classList.remove('collapser');
+    expandcollapse.classList.add('expander');
 }
 
-function show_filters() {
-    var filter_items = document.getElementsByClassName('filter');
-    for (var i = 0; i < filter_items.length; i++)
-        filter_items[i].hidden = false;
+function showFilters() {
+    const filterItems = document.getElementsByClassName('filter');
+    for (let i = 0; i < filterItems.length; i++)
+        filterItems[i].hidden = false;
 }
 
-function add_collapse() {
+function addCollapse() {
     // Add links for show/hide all
-    var resulttable = find('table#results-table');
-    var showhideall = document.createElement("p");
-    showhideall.innerHTML = '<a href="javascript:show_all_extras()">Show all details</a> / ' +
-                            '<a href="javascript:hide_all_extras()">Hide all details</a>';
+    const resulttable = find('table#results-table');
+    const showhideall = document.createElement('p');
+    showhideall.innerHTML = '<a href="javascript:showAllExtras()">Show all details</a> / ' +
+                            '<a href="javascript:hideAllExtras()">Hide all details</a>';
     resulttable.parentElement.insertBefore(showhideall, resulttable);
 
     // Add show/hide link to each result
-    find_all('.col-result').forEach(function(elem) {
-        var collapsed = get_query_parameter('collapsed') || 'Passed';
-        var extras = elem.parentNode.nextElementSibling;
-        var expandcollapse = document.createElement("span");
-        if (extras.classList.contains("collapsed")) {
-            expandcollapse.classList.add("expander")
+    findAll('.col-result').forEach(function(elem) {
+        const collapsed = getQueryParameter('collapsed') || 'Passed';
+        const extras = elem.parentNode.nextElementSibling;
+        const expandcollapse = document.createElement('span');
+        if (extras.classList.contains('collapsed')) {
+            expandcollapse.classList.add('expander');
         } else if (collapsed.includes(elem.innerHTML)) {
-            extras.classList.add("collapsed");
-            expandcollapse.classList.add("expander");
+            extras.classList.add('collapsed');
+            expandcollapse.classList.add('expander');
         } else {
-            expandcollapse.classList.add("collapser");
+            expandcollapse.classList.add('collapser');
         }
         elem.appendChild(expandcollapse);
 
-        elem.addEventListener("click", function(event) {
-            if (event.currentTarget.parentNode.nextElementSibling.classList.contains("collapsed")) {
-                show_extras(event.currentTarget);
+        elem.addEventListener('click', function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains('collapsed')) {
+                showExtras(event.currentTarget);
             } else {
-                hide_extras(event.currentTarget);
+                hideExtras(event.currentTarget);
             }
         });
-    })
+    });
 }
 
-function get_query_parameter(name) {
-    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+function getQueryParameter(name) {
+    const match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
     return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
 }
 
-function init () {
-    reset_sort_headers();
+function init () { // eslint-disable-line no-unused-vars
+    resetSortHeaders();
 
-    add_collapse();
+    addCollapse();
 
-    show_filters();
+    showFilters();
 
-    sort_column(find('.initial-sort'));
+    sortColumn(find('.initial-sort'));
 
-    find_all('.sortable').forEach(function(elem) {
-        elem.addEventListener("click",
-                              function(event) {
-                                  sort_column(elem);
-                              }, false)
+    findAll('.sortable').forEach(function(elem) {
+        elem.addEventListener('click',
+            function() {
+                sortColumn(elem);
+            }, false);
     });
+}
 
-};
-
-function sort_table(clicked, key_func) {
-    var rows = find_all('.results-table-row');
-    var reversed = !clicked.classList.contains('asc');
-    var sorted_rows = sort(rows, key_func, reversed);
+function sortTable(clicked, keyFunc) {
+    const rows = findAll('.results-table-row');
+    const reversed = !clicked.classList.contains('asc');
+    const sortedRows = sort(rows, keyFunc, reversed);
     /* Whole table is removed here because browsers acts much slower
      * when appending existing elements.
      */
-    var thead = document.getElementById("results-table-head");
+    const thead = document.getElementById('results-table-head');
     document.getElementById('results-table').remove();
-    var parent = document.createElement("table");
-    parent.id = "results-table";
+    const parent = document.createElement('table');
+    parent.id = 'results-table';
     parent.appendChild(thead);
-    sorted_rows.forEach(function(elem) {
+    sortedRows.forEach(function(elem) {
         parent.appendChild(elem);
     });
-    document.getElementsByTagName("BODY")[0].appendChild(parent);
+    document.getElementsByTagName('BODY')[0].appendChild(parent);
 }
 
-function sort(items, key_func, reversed) {
-    var sort_array = items.map(function(item, i) {
-        return [key_func(item), i];
+function sort(items, keyFunc, reversed) {
+    const sortArray = items.map(function(item, i) {
+        return [keyFunc(item), i];
     });
 
-    sort_array.sort(function(a, b) {
-        var key_a = a[0];
-        var key_b = b[0];
+    sortArray.sort(function(a, b) {
+        const keyA = a[0];
+        const keyB = b[0];
 
-        if (key_a == key_b) return 0;
+        if (keyA == keyB) return 0;
 
         if (reversed) {
-            return (key_a < key_b ? 1 : -1);
+            return keyA < keyB ? 1 : -1;
         } else {
-            return (key_a > key_b ? 1 : -1);
+            return keyA > keyB ? 1 : -1;
         }
     });
 
-    return sort_array.map(function(item) {
-        var index = item[1];
+    return sortArray.map(function(item) {
+        const index = item[1];
         return items[index];
     });
 }
 
-function key_alpha(col_index) {
+function keyAlpha(colIndex) {
     return function(elem) {
-        return elem.childNodes[1].childNodes[col_index].firstChild.data.toLowerCase();
+        return elem.childNodes[1].childNodes[colIndex].firstChild.data.toLowerCase();
     };
 }
 
-function key_num(col_index) {
+function keyLink(colIndex) {
     return function(elem) {
-        return parseFloat(elem.childNodes[1].childNodes[col_index].firstChild.data);
+        const dataCell = elem.childNodes[1].childNodes[colIndex].firstChild;
+        return dataCell == null ? '' : dataCell.innerText.toLowerCase();
     };
 }
 
-function key_result(col_index) {
+function keyResult(colIndex) {
     return function(elem) {
-        var strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
-                       'Skipped', 'Passed'];
-        return strings.indexOf(elem.childNodes[1].childNodes[col_index].firstChild.data);
+        const strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+            'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[colIndex].firstChild.data);
     };
 }
 
-function reset_sort_headers() {
-    find_all('.sort-icon').forEach(function(elem) {
+function resetSortHeaders() {
+    findAll('.sort-icon').forEach(function(elem) {
         elem.parentNode.removeChild(elem);
     });
-    find_all('.sortable').forEach(function(elem) {
-        var icon = document.createElement("div");
-        icon.className = "sort-icon";
-        icon.textContent = "vvv";
+    findAll('.sortable').forEach(function(elem) {
+        const icon = document.createElement('div');
+        icon.className = 'sort-icon';
+        icon.textContent = 'vvv';
         elem.insertBefore(icon, elem.firstChild);
-        elem.classList.remove("desc", "active");
-        elem.classList.add("asc", "inactive");
+        elem.classList.remove('desc', 'active');
+        elem.classList.add('asc', 'inactive');
     });
 }
 
-function toggle_sort_states(elem) {
+function toggleSortStates(elem) {
     //if active, toggle between asc and desc
     if (elem.classList.contains('active')) {
         elem.classList.toggle('asc');
@@ -393,34 +402,34 @@ function toggle_sort_states(elem) {
 
     //if inactive, reset all other functions and add ascending active
     if (elem.classList.contains('inactive')) {
-        reset_sort_headers();
+        resetSortHeaders();
         elem.classList.remove('inactive');
         elem.classList.add('active');
     }
 }
 
-function is_all_rows_hidden(value) {
-  return value.hidden == false;
+function isAllRowsHidden(value) {
+    return value.hidden == false;
 }
 
-function filter_table(elem) {
-    var outcome_att = "data-test-result";
-    var outcome = elem.getAttribute(outcome_att);
-    class_outcome = outcome + " results-table-row";
-    var outcome_rows = document.getElementsByClassName(class_outcome);
+function filterTable(elem) { // eslint-disable-line no-unused-vars
+    const outcomeAtt = 'data-test-result';
+    const outcome = elem.getAttribute(outcomeAtt);
+    const classOutcome = outcome + ' results-table-row';
+    const outcomeRows = document.getElementsByClassName(classOutcome);
 
-    for(var i = 0; i < outcome_rows.length; i++){
-        outcome_rows[i].hidden = !elem.checked;
+    for(let i = 0; i < outcomeRows.length; i++){
+        outcomeRows[i].hidden = !elem.checked;
     }
 
-    var rows = find_all('.results-table-row').filter(is_all_rows_hidden);
-    var all_rows_hidden = rows.length == 0 ? true : false;
-    var not_found_message = document.getElementById("not-found-message");
-    not_found_message.hidden = !all_rows_hidden;
+    const rows = findAll('.results-table-row').filter(isAllRowsHidden);
+    const allRowsHidden = rows.length == 0 ? true : false;
+    const notFoundMessage = document.getElementById('not-found-message');
+    notFoundMessage.hidden = !allRowsHidden;
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 25-Mar-2022 at 16:14:30 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
+    <p>Report generated on 29-Mar-2022 at 13:30:46 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -434,81 +443,26 @@ function filter_table(elem) {
         <td>{"pluggy": "0.13.1", "py": "1.10.0", "pytest": "5.4.3"}</td></tr>
       <tr>
         <td>Platform</td>
-        <td>Windows-10-10.0.18362-SP0</td></tr>
+        <td>Windows-10-10.0.19042-SP0</td></tr>
       <tr>
         <td>Plugins</td>
-        <td>{"allure-pytest": "2.8.6", "base-url": "1.4.2", "html": "2.1.1", "metadata": "1.11.0"}</td></tr>
+        <td>{"allure-pytest": "2.8.6", "base-url": "1.4.2", "html": "3.1.1", "metadata": "1.11.0"}</td></tr>
       <tr>
         <td>Python</td>
         <td>3.8.10</td></tr></table>
     <h2>Summary</h2>
-    <p>24 tests ran in 10.83 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">19 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">5 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>24 tests ran in 10.64 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">24 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
         <tr>
           <th class="sortable result initial-sort" col="result">Result</th>
           <th class="sortable" col="name">Test</th>
-          <th class="sortable numeric" col="duration">Duration</th>
-          <th>Links</th></tr>
+          <th class="sortable" col="duration">Duration</th>
+          <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">test_case/test_login.py::Test_login::test_login_success</td>
-          <td class="col-duration">0.21</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_case.test_login.Test_login object at 0x0000014CFCEDCEE0&gt;, base_url = &#x27;http://49.235.92.12:7005&#x27;<br/><br/>    @pytest.mark.smoke<br/>    @allure.severity(&quot;blocker&quot;)<br/>    @allure.story(&quot;登录成功用例&quot;)<br/>    @allure.title(&quot;输入正确账号密码登录&quot;)<br/>    def test_login_success(self, base_url):  # 冒烟测试用例<br/>        &quot;&quot;&quot;登录成功用例&quot;&quot;&quot;<br/>        s = requests.Session()<br/>        r = login(s, base_url, &quot;test1&quot;, &quot;123456&quot;)<br/>&gt;       assert r.json().get(&quot;code&quot;) == 0<br/><span class="error">E       AttributeError: &#x27;Session&#x27; object has no attribute &#x27;json&#x27;</span><br/><br/>test_case\test_login.py:19: AttributeError<br/> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;login success!&#x27;, &#x27;username&#x27;: &#x27;test1&#x27;, &#x27;token&#x27;: &#x27;efd3abd6cbafad26b10dfe62453e85a18b1bbf89&#x27;}
-获取到的token为:efd3abd6cbafad26b10dfe62453e85a18b1bbf89
-<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[test10-123321-登录密码错误]</td>
-          <td class="col-duration">0.18</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_case.test_login.Test_login object at 0x0000014CFD080790&gt;, base_url = &#x27;http://49.235.92.12:7005&#x27;, user = &#x27;test10&#x27;, psw = &#x27;123321&#x27;<br/>title = &#x27;登录密码错误&#x27;<br/><br/>    @allure.story(&quot;登录失败用例&quot;)<br/>    @pytest.mark.parametrize(&#x27;user,psw,title&#x27;,<br/>                             [<br/>                                 [&quot;test10&quot;, &quot;123321&quot;, &quot;登录密码错误&quot;],<br/>                                 [&quot;aaxxxx01&quot;, &quot;123456&quot;, &quot;登录账号错误&quot;],<br/>                                 [&quot;test10&quot;, &quot;&quot;, &quot;登录密码为空&quot;],<br/>                                 [&quot;&quot;, &quot;&quot;, &quot;登录账号密码都为空&quot;]<br/>    <br/>                             ]<br/>                             )<br/>    def test_login_fail(self, base_url, user, psw, title):<br/>        &quot;&quot;&quot;登录失败用例&quot;&quot;&quot;<br/>        s = requests.Session()<br/>        allure.dynamic.title(title)<br/>        r = login(s, base_url, user, psw)<br/>&gt;       assert r.json().get(&quot;code&quot;) == 3003<br/><span class="error">E       AttributeError: &#x27;Session&#x27; object has no attribute &#x27;json&#x27;</span><br/><br/>test_case\test_login.py:38: AttributeError<br/> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 3003, &#x27;msg&#x27;: &#x27;账号或密码不正确&#x27;, &#x27;username&#x27;: &#x27;test10&#x27;, &#x27;token&#x27;: &#x27;&#x27;}
-获取到的token为:
-<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[aaxxxx01-123456-登录账号错误]</td>
-          <td class="col-duration">0.18</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_case.test_login.Test_login object at 0x0000014CFD080E50&gt;, base_url = &#x27;http://49.235.92.12:7005&#x27;, user = &#x27;aaxxxx01&#x27;, psw = &#x27;123456&#x27;<br/>title = &#x27;登录账号错误&#x27;<br/><br/>    @allure.story(&quot;登录失败用例&quot;)<br/>    @pytest.mark.parametrize(&#x27;user,psw,title&#x27;,<br/>                             [<br/>                                 [&quot;test10&quot;, &quot;123321&quot;, &quot;登录密码错误&quot;],<br/>                                 [&quot;aaxxxx01&quot;, &quot;123456&quot;, &quot;登录账号错误&quot;],<br/>                                 [&quot;test10&quot;, &quot;&quot;, &quot;登录密码为空&quot;],<br/>                                 [&quot;&quot;, &quot;&quot;, &quot;登录账号密码都为空&quot;]<br/>    <br/>                             ]<br/>                             )<br/>    def test_login_fail(self, base_url, user, psw, title):<br/>        &quot;&quot;&quot;登录失败用例&quot;&quot;&quot;<br/>        s = requests.Session()<br/>        allure.dynamic.title(title)<br/>        r = login(s, base_url, user, psw)<br/>&gt;       assert r.json().get(&quot;code&quot;) == 3003<br/><span class="error">E       AttributeError: &#x27;Session&#x27; object has no attribute &#x27;json&#x27;</span><br/><br/>test_case\test_login.py:38: AttributeError<br/> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 3003, &#x27;msg&#x27;: &#x27;账号或密码不正确&#x27;, &#x27;username&#x27;: &#x27;aaxxxx01&#x27;, &#x27;token&#x27;: &#x27;&#x27;}
-获取到的token为:
-<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[test10--登录密码为空]</td>
-          <td class="col-duration">0.20</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_case.test_login.Test_login object at 0x0000014CFD0DFAF0&gt;, base_url = &#x27;http://49.235.92.12:7005&#x27;, user = &#x27;test10&#x27;, psw = &#x27;&#x27;<br/>title = &#x27;登录密码为空&#x27;<br/><br/>    @allure.story(&quot;登录失败用例&quot;)<br/>    @pytest.mark.parametrize(&#x27;user,psw,title&#x27;,<br/>                             [<br/>                                 [&quot;test10&quot;, &quot;123321&quot;, &quot;登录密码错误&quot;],<br/>                                 [&quot;aaxxxx01&quot;, &quot;123456&quot;, &quot;登录账号错误&quot;],<br/>                                 [&quot;test10&quot;, &quot;&quot;, &quot;登录密码为空&quot;],<br/>                                 [&quot;&quot;, &quot;&quot;, &quot;登录账号密码都为空&quot;]<br/>    <br/>                             ]<br/>                             )<br/>    def test_login_fail(self, base_url, user, psw, title):<br/>        &quot;&quot;&quot;登录失败用例&quot;&quot;&quot;<br/>        s = requests.Session()<br/>        allure.dynamic.title(title)<br/>        r = login(s, base_url, user, psw)<br/>&gt;       assert r.json().get(&quot;code&quot;) == 3003<br/><span class="error">E       AttributeError: &#x27;Session&#x27; object has no attribute &#x27;json&#x27;</span><br/><br/>test_case\test_login.py:38: AttributeError<br/> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 3003, &#x27;msg&#x27;: &#x27;账号或密码不正确&#x27;, &#x27;username&#x27;: &#x27;test10&#x27;, &#x27;token&#x27;: &#x27;&#x27;}
-获取到的token为:
-<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[--登录账号密码都为空]</td>
-          <td class="col-duration">0.17</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_case.test_login.Test_login object at 0x0000014CFD0F6130&gt;, base_url = &#x27;http://49.235.92.12:7005&#x27;, user = &#x27;&#x27;, psw = &#x27;&#x27;<br/>title = &#x27;登录账号密码都为空&#x27;<br/><br/>    @allure.story(&quot;登录失败用例&quot;)<br/>    @pytest.mark.parametrize(&#x27;user,psw,title&#x27;,<br/>                             [<br/>                                 [&quot;test10&quot;, &quot;123321&quot;, &quot;登录密码错误&quot;],<br/>                                 [&quot;aaxxxx01&quot;, &quot;123456&quot;, &quot;登录账号错误&quot;],<br/>                                 [&quot;test10&quot;, &quot;&quot;, &quot;登录密码为空&quot;],<br/>                                 [&quot;&quot;, &quot;&quot;, &quot;登录账号密码都为空&quot;]<br/>    <br/>                             ]<br/>                             )<br/>    def test_login_fail(self, base_url, user, psw, title):<br/>        &quot;&quot;&quot;登录失败用例&quot;&quot;&quot;<br/>        s = requests.Session()<br/>        allure.dynamic.title(title)<br/>        r = login(s, base_url, user, psw)<br/>&gt;       assert r.json().get(&quot;code&quot;) == 3003<br/><span class="error">E       AttributeError: &#x27;Session&#x27; object has no attribute &#x27;json&#x27;</span><br/><br/>test_case\test_login.py:38: AttributeError<br/> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 3003, &#x27;msg&#x27;: &#x27;账号或密码不正确&#x27;, &#x27;username&#x27;: &#x27;&#x27;, &#x27;token&#x27;: &#x27;&#x27;}
-获取到的token为:
-<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
@@ -520,7 +474,7 @@ function filter_table(elem) {
             <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>读取到的ops是:[&#x27;--html=./report/report.html&#x27;, &#x27;--self-contained-html&#x27;]
 读取到的username是:&quot;qangcheng&quot;
 &lt;module &#x27;request内置函数用法.test_b&#x27; from &#x27;E:\\GitCode\\testapiproject\\request内置函数用法\\test_b.py&#x27;&gt;
-&lt;function test_b at 0x0000014CFCF1FE50&gt;
+&lt;function test_b at 0x00000170FF09DD30&gt;
 E:\GitCode\testapiproject\request内置函数用法\test_b.py
 function
 实现的注册功能：test1
@@ -538,7 +492,7 @@ function
             <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>读取到的ops是:[&#x27;--html=./report/report.html&#x27;, &#x27;--self-contained-html&#x27;]
 读取到的username是:&quot;qangcheng&quot;
 &lt;module &#x27;request内置函数用法.test_b&#x27; from &#x27;E:\\GitCode\\testapiproject\\request内置函数用法\\test_b.py&#x27;&gt;
-&lt;function test_b at 0x0000014CFCF1FE50&gt;
+&lt;function test_b at 0x00000170FF09DD30&gt;
 E:\GitCode\testapiproject\request内置函数用法\test_b.py
 function
 实现的注册功能：test2
@@ -556,7 +510,7 @@ function
             <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>读取到的ops是:[&#x27;--html=./report/report.html&#x27;, &#x27;--self-contained-html&#x27;]
 读取到的username是:&quot;qangcheng&quot;
 &lt;module &#x27;request内置函数用法.test_c&#x27; from &#x27;E:\\GitCode\\testapiproject\\request内置函数用法\\test_c.py&#x27;&gt;
-&lt;function test_a at 0x0000014CFCF1FEE0&gt;
+&lt;function test_a at 0x00000170FF09DDC0&gt;
 E:\GitCode\testapiproject\request内置函数用法\test_c.py
 function
 <br/> ------------------------------Captured stdout call------------------------------ <br/>获取到的环境地址是：http://49.235.92.12:7005
@@ -572,7 +526,7 @@ function
             <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>读取到的ops是:[&#x27;--html=./report/report.html&#x27;, &#x27;--self-contained-html&#x27;]
 读取到的username是:&quot;qangcheng&quot;
 &lt;module &#x27;request内置函数用法.test_c&#x27; from &#x27;E:\\GitCode\\testapiproject\\request内置函数用法\\test_c.py&#x27;&gt;
-&lt;function test_xxx at 0x0000014CFCF3C040&gt;
+&lt;function test_xxx at 0x00000170FF09DEE0&gt;
 E:\GitCode\testapiproject\request内置函数用法\test_c.py
 function
 <br/> ------------------------------Captured stdout call------------------------------ <br/>测试第一次读到的地址是:http://49.235.92.12:7005
@@ -590,49 +544,52 @@ function
             <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>读取到的ops是:[&#x27;--html=./report/report.html&#x27;, &#x27;--self-contained-html&#x27;]
 读取到的username是:&quot;qangcheng&quot;
 &lt;module &#x27;request内置函数用法.test_f&#x27; from &#x27;E:\\GitCode\\testapiproject\\request内置函数用法\\test_f.py&#x27;&gt;
-&lt;function test_x at 0x0000014CFCF3C670&gt;
+&lt;function test_x at 0x00000170FF0B8550&gt;
 E:\GitCode\testapiproject\request内置函数用法\test_f.py
 function
 前置操作执行完成
 <br/> ------------------------------Captured stdout call------------------------------ <br/>用例执行的结果拿到的id是：10086
+<br/> ----------------------------Captured stdout teardown---------------------------- <br/>teardown操作，用例完成后
+拿到的商品id是10086
+delete操作SQL数据库删除用例完成生成的id:10086
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_add_goods.py::Test_Goods::test_add_goods_goodsname[-ecpext0-参数化添加商品名称为空]</td>
-          <td class="col-duration">1.60</td>
+          <td class="col-duration">1.82</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>{&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;login success!&#x27;, &#x27;username&#x27;: &#x27;test&#x27;, &#x27;token&#x27;: &#x27;bd6ae917fabcb4fc2f3a87a67f02cba879f6a8a8&#x27;}
-获取到的token为:bd6ae917fabcb4fc2f3a87a67f02cba879f6a8a8
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>{&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;login success!&#x27;, &#x27;username&#x27;: &#x27;test&#x27;, &#x27;token&#x27;: &#x27;b256b6c913267ae2c2530b3b43509e5753c1b296&#x27;}
+获取到的token为:b256b6c913267ae2c2530b3b43509e5753c1b296
 <br/> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:3003,&quot;msg&quot;:&quot;参数不合法&quot;,&quot;data&quot;:{&quot;goodsname&quot;:[&quot;该字段不能为空。&quot;]}}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_add_goods.py::Test_Goods::test_add_goods_goodsname[appoium自动化-ecpext1-参数化添加中文加英文商品名称]</td>
-          <td class="col-duration">1.61</td>
+          <td class="col-duration">1.63</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:0,&quot;msg&quot;:&quot;success!&quot;,&quot;data&quot;:{&quot;id&quot;:26272,&quot;create_time&quot;:&quot;2022-03-25 16:14:22&quot;,&quot;update_time&quot;:&quot;2022-03-25 16:14:22&quot;,&quot;goodscode&quot;:&quot;sp_1648196061&quot;,&quot;goodsname&quot;:&quot;appoium自动化&quot;,&quot;merchantid&quot;:&quot;&quot;,&quot;merchantname&quot;:&quot;&quot;,&quot;goodsprice&quot;:0.0,&quot;stock&quot;:0,&quot;goodsgroupid&quot;:0,&quot;goodsstatus&quot;:1,&quot;price&quot;:0.0}}
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:0,&quot;msg&quot;:&quot;success!&quot;,&quot;data&quot;:{&quot;id&quot;:26717,&quot;create_time&quot;:&quot;2022-03-29 13:30:37&quot;,&quot;update_time&quot;:&quot;2022-03-29 13:30:37&quot;,&quot;goodscode&quot;:&quot;sp_1648531837&quot;,&quot;goodsname&quot;:&quot;appoium自动化&quot;,&quot;merchantid&quot;:&quot;&quot;,&quot;merchantname&quot;:&quot;&quot;,&quot;goodsprice&quot;:0.0,&quot;stock&quot;:0,&quot;goodsgroupid&quot;:0,&quot;goodsstatus&quot;:1,&quot;price&quot;:0.0}}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_add_goods.py::Test_Goods::test_add_goods_goodsname[&lt;&lt;&gt;&gt;,23@!!!-ecpext2-参数化添加乱码商品名称]</td>
-          <td class="col-duration">1.60</td>
+          <td class="col-duration">1.63</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:0,&quot;msg&quot;:&quot;success!&quot;,&quot;data&quot;:{&quot;id&quot;:26273,&quot;create_time&quot;:&quot;2022-03-25 16:14:23&quot;,&quot;update_time&quot;:&quot;2022-03-25 16:14:23&quot;,&quot;goodscode&quot;:&quot;sp_1648196063&quot;,&quot;goodsname&quot;:&quot;&lt;&lt;&gt;&gt;,23@!!!&quot;,&quot;merchantid&quot;:&quot;&quot;,&quot;merchantname&quot;:&quot;&quot;,&quot;goodsprice&quot;:0.0,&quot;stock&quot;:0,&quot;goodsgroupid&quot;:0,&quot;goodsstatus&quot;:1,&quot;price&quot;:0.0}}
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:0,&quot;msg&quot;:&quot;success!&quot;,&quot;data&quot;:{&quot;id&quot;:26718,&quot;create_time&quot;:&quot;2022-03-29 13:30:39&quot;,&quot;update_time&quot;:&quot;2022-03-29 13:30:39&quot;,&quot;goodscode&quot;:&quot;sp_1648531839&quot;,&quot;goodsname&quot;:&quot;&lt;&lt;&gt;&gt;,23@!!!&quot;,&quot;merchantid&quot;:&quot;&quot;,&quot;merchantname&quot;:&quot;&quot;,&quot;goodsprice&quot;:0.0,&quot;stock&quot;:0,&quot;goodsgroupid&quot;:0,&quot;goodsstatus&quot;:1,&quot;price&quot;:0.0}}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_add_goods.py::Test_Goods::test_add_goods_goodsname[2323434234343242342343423423423432423423423423434434-ecpext3-参数化添加大于30位字符商品名称]</td>
-          <td class="col-duration">1.59</td>
+          <td class="col-duration">1.62</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -646,13 +603,13 @@ function
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:0,&quot;msg&quot;:&quot;success!&quot;,&quot;data&quot;:{&quot;id&quot;:26274,&quot;create_time&quot;:&quot;2022-03-25 16:14:27&quot;,&quot;update_time&quot;:&quot;2022-03-25 16:14:27&quot;,&quot;goodscode&quot;:&quot;sp_1648196059&quot;,&quot;goodsname&quot;:&quot;appium自动化&quot;,&quot;merchantid&quot;:&quot;&quot;,&quot;merchantname&quot;:&quot;&quot;,&quot;goodsprice&quot;:0.0,&quot;stock&quot;:0,&quot;goodsgroupid&quot;:0,&quot;goodsstatus&quot;:1,&quot;price&quot;:0.0}}
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:0,&quot;msg&quot;:&quot;success!&quot;,&quot;data&quot;:{&quot;id&quot;:26719,&quot;create_time&quot;:&quot;2022-03-29 13:30:42&quot;,&quot;update_time&quot;:&quot;2022-03-29 13:30:42&quot;,&quot;goodscode&quot;:&quot;sp_1648531835&quot;,&quot;goodsname&quot;:&quot;appium自动化&quot;,&quot;merchantid&quot;:&quot;&quot;,&quot;merchantname&quot;:&quot;&quot;,&quot;goodsprice&quot;:0.0,&quot;stock&quot;:0,&quot;goodsgroupid&quot;:0,&quot;goodsstatus&quot;:1,&quot;price&quot;:0.0}}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_add_goods.py::Test_Goods::test_add_goodid_null</td>
-          <td class="col-duration">0.09</td>
+          <td class="col-duration">0.08</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -672,7 +629,7 @@ function
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_add_goods.py::Test_Goods::test_add_goodsname_null</td>
-          <td class="col-duration">0.09</td>
+          <td class="col-duration">0.08</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -681,19 +638,74 @@ function
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">test_case/test_login_params.py::test_login_params[test_input0-expected0-参数化标题:登录成功]</td>
+          <td class="col-name">test_case/test_login.py::Test_login::test_login_success</td>
+          <td class="col-duration">0.21</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;login success!&#x27;, &#x27;username&#x27;: &#x27;test&#x27;, &#x27;token&#x27;: &#x27;c15e1dd61715d83284c2f8e2ae013e61255c2059&#x27;}
+获取到的token为:c15e1dd61715d83284c2f8e2ae013e61255c2059
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[test10-123321-登录密码错误]</td>
           <td class="col-duration">0.18</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;: 0, &quot;msg&quot;: &quot;login success!&quot;, &quot;username&quot;: &quot;test&quot;, &quot;token&quot;: &quot;eff60795c5a353538519a4dfd2a65c7bf7d06ab6&quot;}
-获取到的token为:eff60795c5a353538519a4dfd2a65c7bf7d06ab6
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 3003, &#x27;msg&#x27;: &#x27;账号或密码不正确&#x27;, &#x27;username&#x27;: &#x27;test10&#x27;, &#x27;token&#x27;: &#x27;&#x27;}
+获取到的token为:
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[aaxxxx01-123456-登录账号错误]</td>
+          <td class="col-duration">0.16</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 3003, &#x27;msg&#x27;: &#x27;账号或密码不正确&#x27;, &#x27;username&#x27;: &#x27;aaxxxx01&#x27;, &#x27;token&#x27;: &#x27;&#x27;}
+获取到的token为:
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[test10--登录密码为空]</td>
+          <td class="col-duration">0.18</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 3003, &#x27;msg&#x27;: &#x27;账号或密码不正确&#x27;, &#x27;username&#x27;: &#x27;test10&#x27;, &#x27;token&#x27;: &#x27;&#x27;}
+获取到的token为:
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[--登录账号密码都为空]</td>
+          <td class="col-duration">0.17</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 3003, &#x27;msg&#x27;: &#x27;账号或密码不正确&#x27;, &#x27;username&#x27;: &#x27;&#x27;, &#x27;token&#x27;: &#x27;&#x27;}
+获取到的token为:
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_login_params.py::test_login_params[test_input0-expected0-参数化标题:登录成功]</td>
+          <td class="col-duration">0.19</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;: 0, &quot;msg&quot;: &quot;login success!&quot;, &quot;username&quot;: &quot;test&quot;, &quot;token&quot;: &quot;575f39fff12c31e9c583ca7d8db01b71cb58d26f&quot;}
+获取到的token为:575f39fff12c31e9c583ca7d8db01b71cb58d26f
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_login_params.py::test_login_params[test_input1-expected1-参数化标题:登录失败]</td>
-          <td class="col-duration">0.19</td>
+          <td class="col-duration">0.20</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -704,7 +716,7 @@ function
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_register.py::Test_Register::test_register_suceess</td>
-          <td class="col-duration">0.20</td>
+          <td class="col-duration">0.39</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -714,7 +726,7 @@ function
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_register.py::Test_Register::test_register_2</td>
-          <td class="col-duration">0.26</td>
+          <td class="col-duration">0.51</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -724,7 +736,7 @@ function
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_register.py::Test_Register::test_nulluser_resgister</td>
-          <td class="col-duration">0.08</td>
+          <td class="col-duration">0.07</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -734,14 +746,14 @@ function
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/workfiow/test_add_get_updtae_goods.py::test_goods_workflow</td>
-          <td class="col-duration">0.29</td>
+          <td class="col-duration">0.47</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>{&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;login success!&#x27;, &#x27;username&#x27;: &#x27;test&#x27;, &#x27;token&#x27;: &#x27;570519966528cc98fe340aca8c87f4f62a6964e5&#x27;}
-获取到的token为:570519966528cc98fe340aca8c87f4f62a6964e5
-<br/> ------------------------------Captured stdout call------------------------------ <br/>获得的商品id是： 26275
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>{&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;login success!&#x27;, &#x27;username&#x27;: &#x27;test&#x27;, &#x27;token&#x27;: &#x27;018011dc4bcf8b5b6b18f1e7ed4c71235ea15b48&#x27;}
+获取到的token为:018011dc4bcf8b5b6b18f1e7ed4c71235ea15b48
+<br/> ------------------------------Captured stdout call------------------------------ <br/>获得的商品id是： 26720
 修改之前商品名称是： appium自动化
-修改后返回为 {&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;success!&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: 26275, &#x27;create_time&#x27;: &#x27;2022-03-25 16:14:30&#x27;, &#x27;update_time&#x27;: &#x27;2022-03-25 16:14:30&#x27;, &#x27;goodscode&#x27;: &#x27;sp_1648196070&#x27;, &#x27;goodsname&#x27;: &#x27;update_xxxx&#x27;, &#x27;merchantid&#x27;: &#x27;&#x27;, &#x27;merchantname&#x27;: &#x27;&#x27;, &#x27;goodsprice&#x27;: 0.0, &#x27;stock&#x27;: 0, &#x27;goodsgroupid&#x27;: 0, &#x27;goodsstatus&#x27;: 1, &#x27;price&#x27;: 0.0}}
+修改后返回为 {&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;success!&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: 26720, &#x27;create_time&#x27;: &#x27;2022-03-29 13:30:45&#x27;, &#x27;update_time&#x27;: &#x27;2022-03-29 13:30:45&#x27;, &#x27;goodscode&#x27;: &#x27;sp_1648531845&#x27;, &#x27;goodsname&#x27;: &#x27;update_xxxx&#x27;, &#x27;merchantid&#x27;: &#x27;&#x27;, &#x27;merchantname&#x27;: &#x27;&#x27;, &#x27;goodsprice&#x27;: 0.0, &#x27;stock&#x27;: 0, &#x27;goodsgroupid&#x27;: 0, &#x27;goodsstatus&#x27;: 1, &#x27;price&#x27;: 0.0}}
 修改后商品ID是: update_xxxx
 <br/></div></td></tr></tbody></table></body></html>

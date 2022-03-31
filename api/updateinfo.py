@@ -30,5 +30,5 @@ if __name__ == '__main__':
     login(s, base_url, "test1", "123456")
     r = update_info(s, base_url, "test1", sex="F", age=21, mail="238283@qq.com")
     print(r.json())
-    r2 = get_info(s, base_url)
-    print(r2.json())
+    # r2 = get_info(s, base_url)
+    # print(r2.json())

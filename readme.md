@@ -23,7 +23,11 @@ api 接口自动化项目
 #执行用例
 cmd 先cd到项目跟目录，执行命令
 >pytest
-生成测试报告，report文件下
+
+
+- 生成测试报告，report文件下
+> pytest --html=./report/test_report.html --self-contained-html
+
 
 . 执行等级级别用例的命令
 > pytest --alluredir ./report/report_allure --allure-severities=(级别参数例如:blocker)
