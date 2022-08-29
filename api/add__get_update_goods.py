@@ -35,6 +35,15 @@ def get_goods(s, base_url, sp_id):
 
 
 def update_goods(s, base_url, sp_id, goodsname, goodscode, **kwargs):
+    """
+    :param s:  session会话
+    :param base_url: 测试地址
+    :param sp_id: 商品ID
+    :param goodsname: 商品名称
+    :param goodscode: 商品代码
+    :param kwargs: 其余非必填写参数
+    :return: 修改商品后的字段
+    """
     """修改单个商品接口"""
     url2 = base_url + "/api/v2/goods/{}".format(sp_id)
     body = {

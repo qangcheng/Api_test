@@ -5,6 +5,7 @@ import pytest
 from api.register_api import register
 import allure
 
+
 @allure.feature("注册")
 class Test_Register(object):
 

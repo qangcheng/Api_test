@@ -12,7 +12,7 @@ db_info = {
 
 class Dbconnect(object):
     def __init__(self, db_info):
-        self.db = pymysql.connect(**db_info,  cursorclass=pymysql.cursors.DictCursor)
+        self.db = pymysql.connect(cursorclass=pymysql.cursors.DictCursor, **db_info)
         self.cursor = self.db.cursor()
 
     def select_sql(self, sql):

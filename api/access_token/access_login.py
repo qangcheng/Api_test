@@ -2,6 +2,14 @@ import requests
 
 
 def login(s: requests.Session, grant_type: str, appid: str, secre: str):
+    """
+
+    :param s:
+    :param grant_type:
+    :param appid:
+    :param secre:
+    :return:
+    """
     url1 = "http://api.weixin.qq.com/cgi-bin/token?"
     body = {
         "grant_type": grant_type,

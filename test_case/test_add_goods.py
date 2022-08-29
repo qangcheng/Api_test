@@ -35,6 +35,7 @@ class Test_Goods(object):
     @allure.story("添加商品成功")
     @allure.title("用例标题:输入中文加英文字符商品名称")
     def test_add_goods_succees(self, base_url, login_fixture):
+
         """添加商品成功"""
         r2 = add_goods(s=login_fixture, base_url=base_url, good_id=good_id, goodsname="appium自动化")
         print(r2.text)

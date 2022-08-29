@@ -18,7 +18,7 @@ def login(s: requests.Session, base_url, user: str = "test", password: str = "12
     r = s.post(url, json=body)
     print(r.json())
     token = r.json().get("token")
-    print(f"获取到的token为:{token}")
+    print("获取到的token为:{}".format(token))
     h = {
         "Authorization": "Token %s" % token
     }

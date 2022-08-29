@@ -9,7 +9,7 @@ import allure
 def login_fixture(base_url):
     """全局登录开展session会话"""
     s = requests.Session()
-    r = login(s, base_url, "test", "123456")
+    login(s, base_url, "test", "123456")
     yield s
     s.close()
 

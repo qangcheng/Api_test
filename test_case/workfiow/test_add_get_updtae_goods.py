@@ -6,6 +6,7 @@ import time
 from api.add__get_update_goods import add_goods, update_goods, get_goods
 import allure
 
+
 @allure.feature("添加商品")
 @allure.story("添加商品流程")
 @allure.title("添加商品后更改商品信息后查看是否成功")

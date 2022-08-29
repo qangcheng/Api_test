@@ -18,7 +18,7 @@ test_data = readyml(yamlpath)["info"]
 
 @pytest.mark.parametrize("test_input,expected", test_data)
 def test_ueserinfo(login_fixture, base_url, test_input, expected):
-    """ 修改信息正确"""
+    """ 修改登录账号信息参数化"""
     r = update_info(login_fixture, base_url, **test_input)
     print(r.text)
     assert r.json().get("code") == expected["code"]

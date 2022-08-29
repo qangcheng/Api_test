@@ -32,5 +32,5 @@ def test_login_params(base_url, test_input, expected, title):
     r = s.post(url, json=body)
     print(r.text)
     token = r.json().get("token")
-    print(f"获取到的token为:{token}")
+    print("获取到的token为:{}".format(token))
     assert r.json().get("code") == expected["code"]

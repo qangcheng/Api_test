@@ -22,5 +22,5 @@ def register(base_url, user=" test_xxyy", password="123456", email="837050079@qq
 
 if __name__ == '__main__':
     base_url = "http://49.235.92.12:7005"
-    r = register(base_url, user="qangcheng")
+    r = register(base_url, user="qang7777eng")
     print(r.text)

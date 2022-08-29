@@ -5,6 +5,7 @@ import allure
 def test_a(host):
     print("获取到的环境地址是：{}".format(host))
 
+
 @allure.title("注册ini表的参数后，request内置函数读取")
 def test_xxx(base_url, base_url2, base_url1):
     """读取ini文件中不同的三个测试地址"""

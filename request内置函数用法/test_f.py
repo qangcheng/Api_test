@@ -13,6 +13,7 @@ def delete_sp_id(request):
     print("拿到的商品id是{}".format(request.config.sp_id))
     print("delete操作SQL数据库删除用例完成生成的id:{}".format(request.config.sp_id))
 
+
 @allure.title("测试用例中的返回值生成后，反回到fixture方法，完成teardown操作")
 def test_x(request, delete_sp_id):
     result = {

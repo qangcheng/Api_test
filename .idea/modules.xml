@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../学习代码/.idea/Api_pro.iml" filepath="$PROJECT_DIR$/../学习代码/.idea/Api_pro.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/api_project.iml" filepath="$PROJECT_DIR$/.idea/api_project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../studyclass/.idea/studyclass.iml" filepath="$PROJECT_DIR$/../studyclass/.idea/studyclass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../youstar_apitest/.idea/youstar_apitest.iml" filepath="$PROJECT_DIR$/../youstar_apitest/.idea/youstar_apitest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../学习代码/.idea/学习代码.iml" filepath="$PROJECT_DIR$/../学习代码/.idea/学习代码.iml" />
     </modules>
   </component>
 </project>

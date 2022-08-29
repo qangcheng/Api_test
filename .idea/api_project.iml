@@ -6,6 +6,10 @@
     </content>
     <orderEntry type="jdk" jdkName="Python 3.8" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="youstar_apitest" />
+    <orderEntry type="module" module-name="Api_pro" />
+    <orderEntry type="module" module-name="学习代码" />
+    <orderEntry type="module" module-name="studyclass" />
   </component>
   <component name="PackageRequirementsSettings">
     <option name="requirementsPath" value="" />

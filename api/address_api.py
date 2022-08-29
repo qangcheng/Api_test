@@ -6,8 +6,17 @@ def add_address(s, base_url, tel="1372892332",
                 name="qangchen",
                 address="深圳市",
                 postal="10086",
-               ):
-    url = base_url+"/api/v2/address"
+                ):
+    """
+     :param s:  session会话
+    :param base_url: 配置测试地址
+    :param tel: 电话
+    :param name: 姓名
+    :param address:城市
+    :param postal: 区号
+    :return:
+    """
+    url = base_url + "/api/v2/address"
     body = {
         "tel": tel,
         "name": name,
