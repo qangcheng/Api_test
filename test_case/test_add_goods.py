@@ -11,7 +11,7 @@ test_goodspath = readyml(goodspath)
 
 
 @allure.feature("添加商品")
-class Test_Goods(object):
+class TestGoods(object):
     """商品接口请求测试报告"""
 
     @allure.story("添加不同类型字符串商品名称参数化")

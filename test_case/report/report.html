@@ -420,7 +420,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 26-Aug-2022 at 19:10:17 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
+    <p>Report generated on 16-Oct-2022 at 11:06:35 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -428,22 +428,22 @@ function filter_table(elem) {
         <td><a href="http://49.235.92.12:7005" target="_blank">http://49.235.92.12:7005</a></td></tr>
       <tr>
         <td>JAVA_HOME</td>
-        <td>D:\java</td></tr>
+        <td>E:\java</td></tr>
       <tr>
         <td>Packages</td>
         <td>{"pluggy": "0.13.1", "py": "1.10.0", "pytest": "5.4.3"}</td></tr>
       <tr>
         <td>Platform</td>
-        <td>Windows-10-10.0.19043-SP0</td></tr>
+        <td>Windows-10-10.0.19044-SP0</td></tr>
       <tr>
         <td>Plugins</td>
-        <td>{"allure-pytest": "2.8.6", "base-url": "1.4.2", "html": "2.1.1", "metadata": "1.11.0"}</td></tr>
+        <td>{"allure-pytest": "2.8.6", "base-url": "1.4.2", "html": "2.1.1", "metadata": "2.0.2"}</td></tr>
       <tr>
         <td>Python</td>
         <td>3.8.10</td></tr></table>
     <h2>Summary</h2>
-    <p>5 tests ran in 0.96 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">5 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>8 tests ran in 7.61 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">8 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -457,55 +457,82 @@ function filter_table(elem) {
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">test_case/test_login.py::Test_login::test_login_success</td>
-          <td class="col-duration">0.20</td>
+          <td class="col-name">test_case/test_add_goods.py::TestGoods::test_add_goods_goodsname[-ecpext0-参数化添加商品名称为空]</td>
+          <td class="col-duration">1.64</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;login success!&#x27;, &#x27;username&#x27;: &#x27;test1&#x27;, &#x27;token&#x27;: &#x27;70eba692abfb235531ebf6840b9c1ec9a9992108&#x27;}
-获取到的token为:70eba692abfb235531ebf6840b9c1ec9a9992108
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>{&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;login success!&#x27;, &#x27;username&#x27;: &#x27;test&#x27;, &#x27;token&#x27;: &#x27;9ba28e8852f102994fdcfa03a2b0704982f08aa1&#x27;}
+获取到的token为:9ba28e8852f102994fdcfa03a2b0704982f08aa1
+<br/> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:3003,&quot;msg&quot;:&quot;参数不合法&quot;,&quot;data&quot;:{&quot;goodsname&quot;:[&quot;该字段不能为空。&quot;]}}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[test10-123321-登录密码错误]</td>
-          <td class="col-duration">0.17</td>
+          <td class="col-name">test_case/test_add_goods.py::TestGoods::test_add_goods_goodsname[appoium自动化-ecpext1-参数化添加中文加英文商品名称]</td>
+          <td class="col-duration">1.64</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 3003, &#x27;msg&#x27;: &#x27;账号或密码不正确&#x27;, &#x27;username&#x27;: &#x27;test10&#x27;, &#x27;token&#x27;: &#x27;&#x27;}
-获取到的token为:
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:0,&quot;msg&quot;:&quot;success!&quot;,&quot;data&quot;:{&quot;id&quot;:180626,&quot;create_time&quot;:&quot;2022-10-16 11:06:30&quot;,&quot;update_time&quot;:&quot;2022-10-16 11:06:30&quot;,&quot;goodscode&quot;:&quot;sp_1665889590&quot;,&quot;goodsname&quot;:&quot;appoium自动化&quot;,&quot;merchantid&quot;:&quot;&quot;,&quot;merchantname&quot;:&quot;&quot;,&quot;goodsprice&quot;:0.0,&quot;stock&quot;:0,&quot;goodsgroupid&quot;:0,&quot;goodsstatus&quot;:1,&quot;price&quot;:0.0}}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[aaxxxx01-123456-登录账号错误]</td>
-          <td class="col-duration">0.19</td>
+          <td class="col-name">test_case/test_add_goods.py::TestGoods::test_add_goods_goodsname[&lt;&lt;&gt;&gt;,23@!!!-ecpext2-参数化添加乱码商品名称]</td>
+          <td class="col-duration">1.68</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 3003, &#x27;msg&#x27;: &#x27;账号或密码不正确&#x27;, &#x27;username&#x27;: &#x27;aaxxxx01&#x27;, &#x27;token&#x27;: &#x27;&#x27;}
-获取到的token为:
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:0,&quot;msg&quot;:&quot;success!&quot;,&quot;data&quot;:{&quot;id&quot;:180627,&quot;create_time&quot;:&quot;2022-10-16 11:06:31&quot;,&quot;update_time&quot;:&quot;2022-10-16 11:06:31&quot;,&quot;goodscode&quot;:&quot;sp_1665889591&quot;,&quot;goodsname&quot;:&quot;&lt;&lt;&gt;&gt;,23@!!!&quot;,&quot;merchantid&quot;:&quot;&quot;,&quot;merchantname&quot;:&quot;&quot;,&quot;goodsprice&quot;:0.0,&quot;stock&quot;:0,&quot;goodsgroupid&quot;:0,&quot;goodsstatus&quot;:1,&quot;price&quot;:0.0}}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[test10--登录密码为空]</td>
-          <td class="col-duration">0.17</td>
+          <td class="col-name">test_case/test_add_goods.py::TestGoods::test_add_goods_goodsname[2323434234343242342343423423423432423423423423434434-ecpext3-参数化添加大于30位字符商品名称]</td>
+          <td class="col-duration">1.68</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 3003, &#x27;msg&#x27;: &#x27;账号或密码不正确&#x27;, &#x27;username&#x27;: &#x27;test10&#x27;, &#x27;token&#x27;: &#x27;&#x27;}
-获取到的token为:
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:3003,&quot;msg&quot;:&quot;参数不合法&quot;,&quot;data&quot;:{&quot;goodsname&quot;:[&quot;请确保这个字段不能超过 30 个字符。&quot;]}}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">test_case/test_login.py::Test_login::test_login_fail[--登录账号密码都为空]</td>
-          <td class="col-duration">0.18</td>
+          <td class="col-name">test_case/test_add_goods.py::TestGoods::test_add_goods_succees</td>
+          <td class="col-duration">0.13</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;code&#x27;: 3003, &#x27;msg&#x27;: &#x27;账号或密码不正确&#x27;, &#x27;username&#x27;: &#x27;&#x27;, &#x27;token&#x27;: &#x27;&#x27;}
-获取到的token为:
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:0,&quot;msg&quot;:&quot;success!&quot;,&quot;data&quot;:{&quot;id&quot;:180628,&quot;create_time&quot;:&quot;2022-10-16 11:06:35&quot;,&quot;update_time&quot;:&quot;2022-10-16 11:06:35&quot;,&quot;goodscode&quot;:&quot;sp_1665889588&quot;,&quot;goodsname&quot;:&quot;appium自动化&quot;,&quot;merchantid&quot;:&quot;&quot;,&quot;merchantname&quot;:&quot;&quot;,&quot;goodsprice&quot;:0.0,&quot;stock&quot;:0,&quot;goodsgroupid&quot;:0,&quot;goodsstatus&quot;:1,&quot;price&quot;:0.0}}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_add_goods.py::TestGoods::test_add_goodid_null</td>
+          <td class="col-duration">0.12</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:2000,&quot;msg&quot;:&quot;缺少必填项goodscode&quot;,&quot;data&quot;:{}}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_add_goods.py::TestGoods::test_add_Duplicate_ID</td>
+          <td class="col-duration">0.12</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:4000,&quot;msg&quot;:&quot;goodscode不能重复添加&quot;,&quot;data&quot;:{}}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_add_goods.py::TestGoods::test_add_goodsname_null</td>
+          <td class="col-duration">0.13</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&quot;code&quot;:3003,&quot;msg&quot;:&quot;参数不合法&quot;,&quot;data&quot;:{&quot;goodsname&quot;:[&quot;该字段不能为空。&quot;]}}
 <br/></div></td></tr></tbody></table></body></html>

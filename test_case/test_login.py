@@ -7,7 +7,7 @@ from api.login import login
 
 
 @allure.feature("登录")
-class Test_login(object):
+class TestLogin(object):
     @pytest.mark.smoke
     @allure.severity("blocker")
     @allure.story("登录成功用例")

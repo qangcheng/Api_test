@@ -7,7 +7,7 @@ import allure
 
 
 @allure.feature("注册")
-class Test_Register(object):
+class TestRegister(object):
 
     @pytest.mark.smoke
     @allure.severity("blocker")
