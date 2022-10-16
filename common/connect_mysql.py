@@ -1,4 +1,5 @@
 import pymysql
+from pymysql import cursors
 
 # 数据库配置信息
 db_info = {

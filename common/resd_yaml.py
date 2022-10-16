@@ -4,7 +4,6 @@ import os
 
 def readyml(ymlpath):
     """读取yaml文件内容"""
-
     if not os.path.isfile(ymlpath,):
         raise FileNotFoundError("文件不存在")
     f = open(ymlpath, "r", encoding="utf-8")
